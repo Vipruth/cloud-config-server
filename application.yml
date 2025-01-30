@@ -1,27 +1,21 @@
 eureka:
-    client:
-      register-with-eureka: true  
-      fetch-registry: true        
-      service-url:
-        defaultZone: http://localhost:8761/eureka/ 
-    instance:
-      prefer-ip-address: true     
-      hostname: localhost
+  client:
+    register-with-eureka: true  
+    fetch-registry: true        
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Corrected indentation
 
- microservice:
-    payment-service:
-      endpoints:
-        endpoint:
-          uri - http://Payment-Service/payment/addPayment  
+  instance:
+    prefer-ip-address: true     
+    hostname: localhost
 
-    order-service:
-      endpoints:
-        endpoint:
-          uri - http://Order-Service/order/addOrder         
+microservice:
+  payment-service:
+    endpoints:
+      endpoint:
+        uri: http://Payment-Service/payment/addPayment  # Corrected the `uri` syntax
 
-
-      
-     
-
-
-      
+  order-service:
+    endpoints:
+      endpoint:
+        uri: http://Order-Service/order/addOrder  # Corrected the `uri` syntax
